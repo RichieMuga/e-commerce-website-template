@@ -1,3 +1,29 @@
+<?php
+$conn= new msqli('localhost','root','','eccomerce project');
+if (isset($_POST['submit']) {
+    $name = $conn-> mysql_real_escape_string($_POST['name']);
+    $email = $conn-> mysql_real_escape_string($_POST['email']);
+    $password =$conn-> mysql_real_escape_string($_POST['password']);
+    $cpassword = $conn-> mysql_real_escape_string($_POST['cpassword']);
+
+    if ($name =="" || $email=="" || $password != $cpassword) {
+        $msg="Please fill in the fields";
+        else {
+          $sql=$conn-> query("SELECT Id FROM users WHERE email='email'");
+          if (sql->num_rows >0) {
+            $msg="email already exists";
+            else {
+              $token='qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCBNM1234567890';
+              $token=str_shuffle($str);
+              substr($token,0,5);
+            conn->
+            }
+          }
+        }
+    }
+}
+?>
+
 <html>
     <title>Register</title>
     <head><meta:charset="UTF-8"></meta:charset>
