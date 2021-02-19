@@ -16,7 +16,11 @@ if (isset($_POST['submit']) {
               $token='qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCBNM1234567890';
               $token=str_shuffle($str);
               substr($token,0,5);
-            conn->
+            conn->query("INSERT INTO users (name,email,password,isemailconfirmed,token)
+            values ('$name',''$email','$hashedpassword','0','$token');
+            "};
+            $msg="you have registered, kindly verify your email";
+
             }
           }
         }
